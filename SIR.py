@@ -10,11 +10,9 @@ import networkx as nx
 import numpy as np
 import sys
 
-
-
 class SIR():
     def __init__(self, seedSim, tau, gamma):
-        
+        #initializes the network and the lists needed for the simulation
         
         self.N1 = 16000 #population of the first group
         self.N2 = 4000 #population of the second group
@@ -60,7 +58,8 @@ class SIR():
         
         
     def simulation(self):     
-        
+        #Stochastic Monte Carlo simulation of the SIR model
+
         t = 1 #time of the simulation
         newInum = [1]
         saveD = {}
